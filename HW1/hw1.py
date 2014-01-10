@@ -1,5 +1,4 @@
-#
-# How to run the comand 
+# How to run the command 
 # for KNN classifier:
 # python hw1.py --knn
 # for Naive Bayes classifier: 
