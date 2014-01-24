@@ -68,9 +68,10 @@ def cross_validate(XX, yy, classifier, k_fold) :
     # return the average accuracy
     return k_score_total/k_fold
 
-c=1.0
-def lr(X_train, y_train, C=c):
-   logreg = LogisticRegression()
+c=2.0
+#def lr(X_train, y_train, c=0.1):
+def lr(X_train, y_train):
+   logreg = LogisticRegression(C=c)
    clf = logreg.fit(X_train, y_train)
    return clf    
 
@@ -157,6 +158,7 @@ elif args.lr==True:
 
                 print "fold <<%s>> :: acc <<%s>>" % (k_f, cv_a)
 
+        
 
             print "Highest Accuracy: fold <<%s>> :: <<%s>>" % (best_k, best_cv_a)   
 
